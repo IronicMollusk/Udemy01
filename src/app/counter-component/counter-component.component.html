@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="onShowText()">Display Details</button>
+<p *ngIf="displayText">
+    Secret Password is: Tuna
+</p>
+<p *ngFor="let logitem of log; let num = index" 
+[ngStyle]="{'background-color': num >= 4 ? 'blue' : 'transparent'}"
+[ngClass]="{'white-text' : num >= 4}">
+{{ logitem }}
+</p>
